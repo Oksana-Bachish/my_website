@@ -1,0 +1,10 @@
+{% if tags %}
+<div class="tags-conteiner">
+    <p>Теги:</p>
+    <ul class="tags-list">
+        {% for tag in tags %}
+        <li><a href="{{ tag.get_absolute_url }}">{{ tag.tag_name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

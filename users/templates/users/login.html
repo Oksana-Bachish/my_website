@@ -1,0 +1,15 @@
+{% extends 'main_page/base.html' %}
+{% block content %}
+<h1>Авторизация</h1>
+<div class="form-info">
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form.as_p }}
+        <p>
+            <button type="submit">Войти</button>
+        </p>
+    </form>
+    <a href="{% url 'users:password_reset' %}">Забыли пароль?</a>
+</div>
+{% endblock %}

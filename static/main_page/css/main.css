@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: 'serif';
+}
+
+body {
+  background: #fcfcfc;
+}
+
+.header {
+  display: flex;
+  background: #322f36;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainmenu {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mainmenu li {
+  display: block;
+  padding: 1em;
+  color: #fcfcfc;
+}
+
+.mainmenu a {
+  color: #fcfcfc;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.mainmenu li:hover {
+  background: #7e05f7;
+}
+
+.last {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+
+}

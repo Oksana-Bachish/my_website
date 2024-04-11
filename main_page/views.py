@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 menu = [
+    {'title': 'Главная', 'url_name': 'index'},
     {'title': 'О сайте', 'url_name': 'about'},
     {'title': 'Контакты', 'url_name': 'contact'},
     {'title': 'Вакансии', 'url_name': 'vacancy'},

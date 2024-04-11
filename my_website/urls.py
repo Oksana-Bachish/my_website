@@ -23,7 +23,9 @@ from my_website import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')),
-    #path('music/', include('music.urls')),
+    path('music/', include('music.urls')),
+    path('users/', include('users.urls', namespace='users')),
+    #path('films/', include('films.urls')),
 ]
 
 handler404 = page_not_found
@@ -31,3 +33,6 @@ handler404 = page_not_found
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+admin.site.site_header = 'Панель администрирования'
+admin.site.index_title = 'Сайт для разработки'

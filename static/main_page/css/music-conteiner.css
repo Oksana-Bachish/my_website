@@ -1,0 +1,129 @@
+.conteiner {
+  display: flex;
+}
+
+.content-text {
+  width: 80%;
+}
+
+/* Меню слева */
+.menu-bar {
+  width: 20%;
+  background: #2d1754;
+  height: 94vh;
+}
+
+/*.leftchapters {
+  display: flex;
+  margin: 1.5em;
+}*/
+
+.leftchapters li {
+  display: block;
+  padding: 1em;
+}
+
+.leftchapters a, .leftchapters p {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-size: 20px;
+}
+
+.leftchapters li:hover {
+  background: #7e05f7;
+  transform: scale(1.05);
+}
+
+.selected {
+  color: #fcfcfc;
+  font-size: 22px;
+}
+
+.tags-list li {
+  display: inline-block;
+  padding: 0.6em;
+  margin: 0.2em;
+  border: 0.5px solid #c5c1c7;
+  border-radius: 5px;
+}
+
+.tags-list a {
+  font-size: 14px;
+}
+
+/* Центральная панель музыкантов */
+
+.article {
+  display: block;
+  padding-top: 1em;
+}
+
+.article-panel {
+  display: flex;
+  background: #e0e0e0;
+}
+
+.article li {
+  list-style: none;
+}
+
+.article p, .article h2 {
+  margin-left: 0.7em;
+}
+
+.info-bar {
+  display: flex;
+}
+
+.list-articles a {
+  text-decoration: none;
+  display: block;
+  padding: 0.7em;
+  background: #836994;
+  width: 8em;
+  height: 1em;
+  border-radius: 5px;
+  margin: 0.4em;
+}
+
+.info-bar a {
+  text-decoration: none;
+  display: block;
+  padding: 0.7em;
+  background: #cec5d4;
+  width: 7em;
+  height: 1em;
+  border-radius: 5px;
+  margin: 0.4em;
+
+}
+
+.info-bar a:hover {
+  background: #2d1754;
+  color: #fcfcfc;
+}
+
+.info-bar img {
+  width: 300px;
+  height: 200px;
+  margin: 0.4em;
+}
+
+
+/* Панель с номерами страниц */
+.numbering {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-pages li {
+  display: inline-block;
+  padding: 1.2em;
+  background: #e0e0e0;
+  border-radius: 30px;
+  border: 0.5px solid #c2bec4;
+}

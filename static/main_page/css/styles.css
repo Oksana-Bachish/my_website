@@ -4,15 +4,15 @@ html, body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	color: #444;
+	background: #fbfafc;
 }
 
 a {
-	color: #0059b2;
+	color: #fcfcfc;
 	text-decoration: none;
 }
 a:hover {
-	color: #CC0000;
+	color: #0000FF;
 	text-decoration: underline;
 }
 
@@ -42,11 +42,11 @@ p.link-read-post a {
 }
 
 div.article-panel {
-    background: #eee;
+    background: #190061;
     padding: 5px 10px 5px 10px;
     box-sizing: border-box;
     overflow: hidden;
-    color: #555;
+    color: #c9c7c7;
 }
 div.article-panel p.first {
     margin: 0;
@@ -58,13 +58,14 @@ div.article-panel p.last {
 }
 
 ul.list-articles {
+    display: block;
+    float: right;
+    width: 80%;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-ul.list-articles li {
-	border-bottom: 1px solid #ccc;
-}
+
 
 .table-page {
 	width: 100%;
@@ -76,7 +77,7 @@ ul.list-articles li {
 .clear {clear: both;}
 
 .header {
-	background: #3F4137;
+	background: #240090;
 	height: 60px;
 }
 
@@ -146,7 +147,7 @@ ul.langitem li a:hover {
 	color: #FDA83D;
 }
 div.button {
-	background: #3F4137;
+	background: #7B68EE;
 	max-width: 200px;
 	margin: 0 auto;
 	padding: 5px 20px 5px 20px;
@@ -155,16 +156,21 @@ div.button {
 }
 
 .table-content {
-	width: 100%;
-	min-height: 100%;
+    display: block;
+    float: left;
+	width: 20px;
 	height: 100%;
 }
 
 .left-chapters {
+    display: block;
+    float: left;
+    height: 100%:
+    width: 20%;
 	margin: 0;
-	background: #eee;
-	border-right: 1px solid #ccc;
+	background: #282828;
 }
+
 .left-chapters ul {
 	width: 230px;
 	margin: 0;
@@ -174,11 +180,11 @@ div.button {
 }
 .left-chapters ul li {
 	margin: 30px 0 0 0;
-	color: #999;
+	color: #fdc073;
 }
 .left-chapters ul li.selected {color: #0059b2; }
 .left-chapters ul li a {
-	color: #444;
+	color: #fdc073;
 	text-decoration: none;
 }
 .left-chapters ul li a:hover { color: #CC0000; }
@@ -231,7 +237,7 @@ ul.breadcrumbs {
 	padding: 0;
 	list-style: none;
 	font-size: 20px;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 }
 ul.breadcrumbs li {
 	display: inline-block;
@@ -251,7 +257,7 @@ ul.control {
 	margin: 0;
 	padding: 60px 0 0 0;
 	list-style: none;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 	font-size: 18px;
 	width: 100%;
 }
@@ -266,7 +272,7 @@ ul.content-table {
 	margin: 0;
 	padding: 60px 0 0 30px;
 	list-style: none;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 	font-size: 28px;
 }
 ul.content-table li {
@@ -280,7 +286,7 @@ ul.content-table li a:hover {color: #F0711C;}
 
 .content-text {
 	margin: 60px 0 0 30px;
-	color: #000;
+	color: #ffffff;
 	font-size: 20px;
 	font-family: Yandex Sans Display Light;
 }
@@ -296,7 +302,7 @@ ul.lang-list {
 	border-top: 1px solid #959A82;
 	box-sizing: border-box;
 	font-size: 18px;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 }
 ul.lang-list li {
 	display: inline-block;
@@ -321,12 +327,12 @@ ul.lang-list li a:hover {color: #fdc073;}
 	padding: 0 10px 0 10px;
 	margin-left: 30px;
 	background: #fff;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 }
 
 .list-topic {
 	margin: 40px 0 60px 0;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 }
 .list-topic p {
 	margin: 0;
@@ -366,7 +372,7 @@ ul.lang-list li a:hover {color: #fdc073;}
 .quote {
 	background: url('../images/blockquote.png') no-repeat 0 10px;
 	padding: 5px 5px 5px 70px;
-	font-family: Sans-serif, Arial, Tahoma;
+	font-family: Arial, Tahoma;
 	font-style: italic;
 }
 
@@ -411,18 +417,22 @@ ul.lang-list li a:hover {color: #fdc073;}
 .list-pages {
 	text-align: center;
 	margin: 0 0 20px 0;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
 }
 .list-pages ul {
 	margin: 20px 0 0 0;
 	padding: 0;
 	list-style: none;
 }
+
 .list-pages ul li {
-	display: inline-block;
 	margin: 0 20px 0 0;
 }
+
 .list-pages a {
-	color: #000;
+	color: #fdc073;
 	font-size: 24px;
 	text-decoration: none;
 }
@@ -439,7 +449,7 @@ ul.lang-list li a:hover {color: #fdc073;}
 }
 .list-pages .page-num-selected {
 	border: none;
-	color: #000;
+	color: #fdc073;
 	font-size: 20px;
 }
 .list-pages .page-num-selected:hover {

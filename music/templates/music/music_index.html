@@ -1,0 +1,90 @@
+{% extends 'main_page/base.html' %}
+{% load music_tags %}
+{% block content %}
+<div class="conteiner">
+    <div class="menu-bar">
+        <ul class="leftchapters">
+            {% if genre_selected == 0 %}
+            <li class="selected">Все жанры</li>
+            {% else %}
+            <li><a href="{% url 'music:music_index' %}">Все жанры</a></li>
+            {% endif %}
+
+            {% show_genre genre_selected %}
+            <!--            <li class="share">-->
+            <!--            </li>-->
+            {% show_tags %}
+        </ul>
+        <!--        <div class="tags">-->
+        <!--            <ul>-->
+        <!--                <li></li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </div>
+    <div class="content-text">
+        <h1>{{ title }}</h1>
+        <div class="list-articles">
+            {% for p in pages %}
+            <ul class="article">
+                <li>
+                    <div class="article-panel">
+                        <p class="first">Категория: {{p.genre.name}}| Автор: {{ p.author.username |
+                            default:"неизвестен"}}</p>
+                        <p class="last">Дата: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
+                    </div>
+                </li>
+
+                <div class="info-bar">
+                    {% if p.photo %}
+                    <p><img src="{{p.photo.url}}"></p>
+                    {% endif %}
+                    <li>
+                        <h2>{{ p.title }}</h2>
+                        {% autoescape off %}
+                        <p>{{ p.context|linebreaks|truncatewords:40 }}</p>
+                        {% endautoescape off %}
+                        <p><a href="{{ p.get_absolute_url }}">Читать статью</a></p>
+                        {% if not forloop.last %}
+                        {% endif %}
+                    </li>
+                </div>
+            </ul>
+            {% endfor %}
+            <a href="{% url 'music:add_page' %}">Добавить статью</a>
+        </div>
+    </div>
+
+    {% endblock %}
+</div>
+
+{% block navigation %}
+<div class="numbering">
+    {% if page_obj.has_other_pages %}
+    <nav class="list-pages">
+        <ul>
+            {% if page_obj.has_previous %}
+            <li class="page-num">
+                <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+            </li>
+            {% endif %}
+
+            {% for p in paginator.page_range %}
+            {% if page_obj.number == p %}
+            <li class="page-num page-num-selected">{{ p }}</li>
+            {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+            <li class="page-num">
+                <a href="?page={{ p }}">{{ p }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li class="page-num">
+                <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{% endblock %}
